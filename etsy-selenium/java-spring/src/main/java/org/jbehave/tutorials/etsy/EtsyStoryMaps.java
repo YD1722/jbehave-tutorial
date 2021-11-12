@@ -42,7 +42,7 @@ public class EtsyStoryMaps extends JUnitStoryMaps {
 
     @Override
     protected List<String> storyPaths() {
-        return new StoryFinder().findPaths(codeLocationFromClass(this.getClass()), "**/stories/*.story", "");
+        return new StoryFinder().findPaths(codeLocationFromClass(this.getClass()), "**/stories/*.depend.story", "");
 
     }
 

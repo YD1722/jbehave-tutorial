@@ -11,6 +11,8 @@ In order to show the browsing cart functionality
 As a user
 I want to browse in a gallery
 
+!-- GivenStories: etsy_cart.story
+
 Scenario: Browsing around the site for items
 
 Given I am on etsy.com

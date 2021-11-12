@@ -29,7 +29,6 @@ import static org.jbehave.core.reporters.Format.CONSOLE;
 import static org.jbehave.web.selenium.WebDriverHtmlOutput.WEB_DRIVER_HTML;
 
 public class EtsyDotComStories extends JUnitStories {
-
     PendingStepStrategy pendingStepStrategy = new FailingUponPendingStep();
     CrossReference crossReference = new CrossReference().withJsonOnly().withPendingStepStrategy(pendingStepStrategy)
             .withOutputAfterEachStory(true).excludingStoriesWithNoExecutedScenarios(true);
@@ -37,7 +36,7 @@ public class EtsyDotComStories extends JUnitStories {
     SeleniumContext seleniumContext = new SeleniumContext();
     SeleniumStepMonitor stepMonitor = new SeleniumStepMonitor(contextView, seleniumContext,
             crossReference.getStepMonitor());
-    Format[] formats = new Format[] { new SeleniumContextOutput(seleniumContext), CONSOLE, WEB_DRIVER_HTML };
+    Format[] formats = new Format[]{new SeleniumContextOutput(seleniumContext), CONSOLE, WEB_DRIVER_HTML};
     StoryReporterBuilder reporterBuilder = new StoryReporterBuilder()
             .withCodeLocation(codeLocationFromClass(EtsyDotComStories.class)).withFailureTrace(true)
             .withFailureTraceCompression(true).withDefaultFormats().withFormats(formats)

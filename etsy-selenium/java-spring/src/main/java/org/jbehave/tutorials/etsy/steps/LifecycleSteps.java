@@ -6,18 +6,20 @@ import org.openqa.selenium.WebDriverException;
 
 public class LifecycleSteps {
 
-    private final WebDriverProvider webDriverProvider;
+//    private final WebDriverProvider webDriverProvider;
+//
+//    public LifecycleSteps(WebDriverProvider webDriverProvider) {
+//        this.webDriverProvider = webDriverProvider;
+//    }
 
-    public LifecycleSteps(WebDriverProvider webDriverProvider) {
-        this.webDriverProvider = webDriverProvider;
-    }
-
-    @BeforeScenario
+    //    @BeforeScenario
     public void emptyCart() {
-        try {
-            webDriverProvider.get().manage().deleteCookieNamed("uaid");
-        } catch (WebDriverException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            webDriverProvider.get().manage().deleteCookieNamed("uaid");
+//        } catch (WebDriverException e) {
+//            e.printStackTrace();
+//        }
+
+        System.out.println("Empty Card");
     }
 }
